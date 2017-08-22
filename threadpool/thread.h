@@ -1,4 +1,3 @@
-#pragma once
 #ifndef __THREAD_H_
 #define __THREAD_H_
 
