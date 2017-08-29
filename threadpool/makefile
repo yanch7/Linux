@@ -1,5 +1,5 @@
 cc=g++ -std=c++11
-objs=thread.o mutex.o condition.o fileutil.o threadpool.o
+objs=thread.o mutex.o condition.o fileutil.o threadpool.o eventloop.o
 
 all : $(objs)
 .PHONY : all
@@ -18,6 +18,9 @@ fileutil.o : fileutil.h
 
 threadpool.o : threadpool.h thread.h mutex.h
 	$(cc) -c threadpool.cpp
+
+eventloop.o : eventloop.h
+	$(cc) -c eventloop.cpp
 	
 .PHONY : clean
 clean :
